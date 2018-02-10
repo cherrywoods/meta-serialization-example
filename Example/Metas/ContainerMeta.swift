@@ -57,7 +57,7 @@ class ContainerMeta: KeyedContainerMeta, UnkeyedContainerMeta {
     
     // MARK: - unkeyed
     
-    var count: Int {
+    var count: Int? {
         return subMetas.count
     }
     
@@ -71,7 +71,7 @@ class ContainerMeta: KeyedContainerMeta, UnkeyedContainerMeta {
     
     func append(element: Meta) {
         // note that indexing starts at 0 in UnkeyedContainerMetas
-        subMetas[convertToKey(index: count)] = element
+        subMetas[convertToKey(index: count!)] = element
     }
     
     func convertToKey(index: Int) -> String {

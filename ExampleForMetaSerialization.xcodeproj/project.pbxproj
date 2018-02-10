@@ -67,6 +67,7 @@
 		6325EDEA20220B290066B517 /* Translator.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Translator.swift; sourceTree = "<group>"; };
 		6325EDF520220B4F0066B517 /* MetaSerialization.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = MetaSerialization.framework; path = Carthage/Build/Mac/MetaSerialization.framework; sourceTree = "<group>"; };
 		6325EDFA20220B600066B517 /* MetaSerialization.framework.dSYM */ = {isa = PBXFileReference; lastKnownFileType = wrapper.dsym; name = MetaSerialization.framework.dSYM; path = Carthage/Build/Mac/MetaSerialization.framework.dSYM; sourceTree = "<group>"; };
+		63340838202F5ADB004C3F99 /* MetaSerialization.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = MetaSerialization.framework; path = Carthage/Build/Mac/MetaSerialization.framework; sourceTree = "<group>"; };
 		63B77F6E20234A3800FE8074 /* Train.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Train.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
@@ -85,6 +86,7 @@
 		6325EDC420220AFD0066B517 = {
 			isa = PBXGroup;
 			children = (
+				63340838202F5ADB004C3F99 /* MetaSerialization.framework */,
 				6325EDFA20220B600066B517 /* MetaSerialization.framework.dSYM */,
 				6325EDF520220B4F0066B517 /* MetaSerialization.framework */,
 				6325EDDE20220B290066B517 /* Example */,

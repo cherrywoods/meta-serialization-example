@@ -77,7 +77,7 @@ class 🚂Translator: MetaSerialization.Translator {
     
     // MARK: - decoding
     
-    func unwrap<T>(meta: Meta) throws -> T? {
+    func unwrap<T>(meta: Meta, toType type: T.Type) throws -> T? {
         
         guard let stringValue = (meta as? SingleValueMeta)?.string else {
             return nil

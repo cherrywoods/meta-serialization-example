@@ -1,0 +1,3 @@
+[submodule "Carthage/Checkouts/swift-meta-serialization"]
+	path = Carthage/Checkouts/swift-meta-serialization
+	url = https://github.com/cherrywoods/swift-meta-serialization.git

@@ -8,11 +8,11 @@
 import Foundation
 import MetaSerialization
 
-class 🚂Translator: MetaSerialization.Translator {
+class 🚂Translator: MetaSupplier, Unwrapper {
     
     // MARK: - encoding
     
-    func wrappingMeta<T>(for value: T) -> Meta? {
+    func wrap<T>(for value: T, at path: [CodingKey]) -> Meta? {
         
         /*
          In this function we define which types
@@ -33,7 +33,7 @@ class 🚂Translator: MetaSerialization.Translator {
             value is Passenger {
             
             // we use a single Meta type for all those types
-            return SingleValueMeta()
+            return SingleValueMeta(value: value)
             
         } else if value is GenericNil {
             
@@ -64,20 +64,9 @@ class 🚂Translator: MetaSerialization.Translator {
         return ContainerMeta()
     }
     
-    func encode<Raw>(_ meta: Meta) throws -> Raw {
-        
-        // encoding code is outsources to TrainFormat
-        // it is totally legitimate to force cast to Raw
-        // because the Raw format is set by ourselves
-        // in our implementation of Representation or
-        // Serialization.
-        return TrainFormat.encode(meta: meta) as! Raw
-        
-    }
-    
     // MARK: - decoding
     
-    func unwrap<T>(meta: Meta, toType type: T.Type) throws -> T? {
+    func unwrap<T>(meta: Meta, toType type: T.Type, at path: [CodingKey]) throws -> T? {
         
         guard let stringValue = (meta as? SingleValueMeta)?.string else {
             return nil
@@ -133,11 +122,6 @@ class 🚂Translator: MetaSerialization.Translator {
             return nil
         }
         
-    }
-    
-    func decode<Raw>(_ raw: Raw) throws -> Meta {
-        // the same as for encode() applies here
-        return TrainFormat.decode(from: raw as! String)
     }
     
 }

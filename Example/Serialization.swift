@@ -12,12 +12,27 @@ class 🚂Serialization: Serialization {
     
     typealias Raw = String
     
+    private static let translator = 🚂Translator()
+    
     func provideNewEncoder() -> MetaEncoder {
-        return MetaEncoder(translator: 🚂Translator())
+        return MetaEncoder(metaSupplier: 🚂Serialization.translator, storage: CodingDictionary())
     }
     
-    func provideNewDecoder(raw: String) throws -> MetaDecoder {
-        return try MetaDecoder(translator: 🚂Translator(), raw: raw)
+    func provideNewDecoder() -> MetaDecoder {
+        return MetaDecoder(unwrapper: 🚂Serialization.translator, storage: CodingDictionary())
     }
+    
+    func convert(raw: String) throws -> Meta {
+        
+        return TrainFormat.decode(from: raw)
+        
+    }
+    
+    func convert(meta: Meta) throws -> String {
+        
+        return TrainFormat.encode(meta: meta)
+        
+    }
+    
     
 }

@@ -14,24 +14,18 @@ struct SingleValueMeta: Meta {
     
     var string: String = ""
     
-    init() {  }
-    
     init(string: String) {
         self.string = string
     }
     
-    mutating func set(value: Any) throws {
+    init(value: Any) {
         
         // this check isn't required, but good to have
         // a failure indicates an error in this project or in MetaSerialization
-        precondition(value is LosslessStringConvertible, "Invalid type on set")
+        precondition(value is LosslessStringConvertible, "Invalid type on init(value:)")
         
         self.string = (value as! LosslessStringConvertible).description
         
-    }
-    
-    func get() -> Any? {
-        return string
     }
     
 }

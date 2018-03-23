@@ -10,17 +10,22 @@ import MetaSerialization
 
 protocol 🚂: Representation {  }
 
-extension String: 🚂 {  }
-
-extension 🚂 {
+extension String: 🚂 {
     
     public static func provideNewEncoder() -> MetaEncoder {
-        return MetaEncoder(translator: 🚂Translator())
+        return MetaEncoder(metaSupplier: 🚂Translator())
     }
     
-    public func provideNewDecoder() throws -> MetaDecoder {
-        return try MetaDecoder(translator: 🚂Translator(), raw: self)
+    public func provideNewDecoder() -> MetaDecoder {
+        return MetaDecoder(unwrapper: 🚂Translator())
+    }
+    
+    public func convert() throws -> Meta {
+        return TrainFormat.decode(from: self)
+    }
+    
+    public init(meta: Meta) throws {
+        self = TrainFormat.encode(meta: meta)
     }
     
 }
-

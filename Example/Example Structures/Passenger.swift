@@ -26,6 +26,12 @@ struct Passenger: DirectlyCodable, LosslessStringConvertible {
     
     let happy: Bool
     
+    init(happy: Bool = true) {
+        
+        self.happy = happy
+        
+    }
+    
     init?(_ description: String = "😄") {
         
         guard description == "😄" || description == "😞" else {

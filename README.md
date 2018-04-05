@@ -5,8 +5,8 @@ This repository contains example project the should demostrate use cases and imp
 
 Contents
 --------
- * TrainFormat
- * GenieFormat
+ * [TrainFormat](https://github.com/cherrywoods/meta-serialization-examples/tree/master/TrainFormat)
+ * [GenieFormat](https://github.com/cherrywoods/meta-serialization-examples/tree/master/GenieFormat)
 
 TrainFormat
 -----------

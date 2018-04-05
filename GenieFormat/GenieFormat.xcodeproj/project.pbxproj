@@ -82,7 +82,7 @@
 /* Begin PBXFileReference section */
 		63158BB6207644BB00940EC2 /* Magic.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Magic.swift; sourceTree = "<group>"; };
 		63158BB820764CFF00940EC2 /* ThreeWishes.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ThreeWishes.swift; sourceTree = "<group>"; };
-		63880E042075552700B62EF7 /* Flaschengeist.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = Flaschengeist.app; sourceTree = BUILT_PRODUCTS_DIR; };
+		63880E042075552700B62EF7 /* GenieFormat.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = GenieFormat.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		63880E092075552700B62EF7 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		63880E0C2075552700B62EF7 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.xib; name = Base; path = Base.lproj/MainMenu.xib; sourceTree = "<group>"; };
 		63880E0E2075552700B62EF7 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
@@ -120,7 +120,7 @@
 		63880E052075552700B62EF7 /* Products */ = {
 			isa = PBXGroup;
 			children = (
-				63880E042075552700B62EF7 /* Flaschengeist.app */,
+				63880E042075552700B62EF7 /* GenieFormat.app */,
 			);
 			name = Products;
 			sourceTree = "<group>";
@@ -170,9 +170,9 @@
 /* End PBXGroup section */
 
 /* Begin PBXNativeTarget section */
-		63880E032075552700B62EF7 /* Flaschengeist */ = {
+		63880E032075552700B62EF7 /* GenieFormat */ = {
 			isa = PBXNativeTarget;
-			buildConfigurationList = 63880E122075552700B62EF7 /* Build configuration list for PBXNativeTarget "Flaschengeist" */;
+			buildConfigurationList = 63880E122075552700B62EF7 /* Build configuration list for PBXNativeTarget "GenieFormat" */;
 			buildPhases = (
 				63880E002075552700B62EF7 /* Sources */,
 				63880E012075552700B62EF7 /* Frameworks */,
@@ -182,9 +182,9 @@
 			);
 			dependencies = (
 			);
-			name = Flaschengeist;
+			name = GenieFormat;
 			productName = Flaschengeist;
-			productReference = 63880E042075552700B62EF7 /* Flaschengeist.app */;
+			productReference = 63880E042075552700B62EF7 /* GenieFormat.app */;
 			productType = "com.apple.product-type.application";
 		};
 /* End PBXNativeTarget section */
@@ -203,7 +203,7 @@
 					};
 				};
 			};
-			buildConfigurationList = 63880DFF2075552700B62EF7 /* Build configuration list for PBXProject "Genie" */;
+			buildConfigurationList = 63880DFF2075552700B62EF7 /* Build configuration list for PBXProject "GenieFormat" */;
 			compatibilityVersion = "Xcode 9.3";
 			developmentRegion = en;
 			hasScannedForEncodings = 0;
@@ -222,7 +222,7 @@
 			);
 			projectRoot = "";
 			targets = (
-				63880E032075552700B62EF7 /* Flaschengeist */,
+				63880E032075552700B62EF7 /* GenieFormat */,
 			);
 		};
 /* End PBXProject section */
@@ -483,7 +483,7 @@
 /* End XCBuildConfiguration section */
 
 /* Begin XCConfigurationList section */
-		63880DFF2075552700B62EF7 /* Build configuration list for PBXProject "Genie" */ = {
+		63880DFF2075552700B62EF7 /* Build configuration list for PBXProject "GenieFormat" */ = {
 			isa = XCConfigurationList;
 			buildConfigurations = (
 				63880E102075552700B62EF7 /* Debug */,
@@ -492,7 +492,7 @@
 			defaultConfigurationIsVisible = 0;
 			defaultConfigurationName = Release;
 		};
-		63880E122075552700B62EF7 /* Build configuration list for PBXNativeTarget "Flaschengeist" */ = {
+		63880E122075552700B62EF7 /* Build configuration list for PBXNativeTarget "GenieFormat" */ = {
 			isa = XCConfigurationList;
 			buildConfigurations = (
 				63880E132075552700B62EF7 /* Debug */,

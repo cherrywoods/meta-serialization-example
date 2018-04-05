@@ -48,7 +48,7 @@
 /* End PBXCopyFilesBuildPhase section */
 
 /* Begin PBXFileReference section */
-		6325EDCD20220AFD0066B517 /* ExampleForMetaSerialization.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = ExampleForMetaSerialization.app; sourceTree = BUILT_PRODUCTS_DIR; };
+		6325EDCD20220AFD0066B517 /* TrainFormat.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = TrainFormat.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		6325EDD220220AFD0066B517 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		6325EDD520220AFD0066B517 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.xib; name = Base; path = Base.lproj/MainMenu.xib; sourceTree = "<group>"; };
 		6325EDD720220AFD0066B517 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
@@ -85,8 +85,8 @@
 			children = (
 				6325EDFA20220B600066B517 /* MetaSerialization.framework.dSYM */,
 				6325EDF520220B4F0066B517 /* MetaSerialization.framework */,
-				6325EDDE20220B290066B517 /* Example */,
-				6325EDCF20220AFD0066B517 /* ExampleForMetaSerialization */,
+				6325EDDE20220B290066B517 /* Sources */,
+				6325EDCF20220AFD0066B517 /* Some More */,
 				6325EDCE20220AFD0066B517 /* Products */,
 			);
 			sourceTree = "<group>";
@@ -94,12 +94,12 @@
 		6325EDCE20220AFD0066B517 /* Products */ = {
 			isa = PBXGroup;
 			children = (
-				6325EDCD20220AFD0066B517 /* ExampleForMetaSerialization.app */,
+				6325EDCD20220AFD0066B517 /* TrainFormat.app */,
 			);
 			name = Products;
 			sourceTree = "<group>";
 		};
-		6325EDCF20220AFD0066B517 /* ExampleForMetaSerialization */ = {
+		6325EDCF20220AFD0066B517 /* Some More */ = {
 			isa = PBXGroup;
 			children = (
 				6325EDD220220AFD0066B517 /* Assets.xcassets */,
@@ -107,10 +107,10 @@
 				6325EDD720220AFD0066B517 /* Info.plist */,
 				6325EDD820220AFD0066B517 /* ExampleForMetaSerialization.entitlements */,
 			);
-			path = ExampleForMetaSerialization;
+			path = "Some More";
 			sourceTree = "<group>";
 		};
-		6325EDDE20220B290066B517 /* Example */ = {
+		6325EDDE20220B290066B517 /* Sources */ = {
 			isa = PBXGroup;
 			children = (
 				6325EDDF20220B290066B517 /* main.swift */,
@@ -121,7 +121,7 @@
 				6325EDE020220B290066B517 /* Metas */,
 				63B77F6D20234A1C00FE8074 /* Example Structures */,
 			);
-			path = Example;
+			path = Sources;
 			sourceTree = "<group>";
 		};
 		6325EDE020220B290066B517 /* Metas */ = {
@@ -155,9 +155,9 @@
 /* End PBXGroup section */
 
 /* Begin PBXNativeTarget section */
-		6325EDCC20220AFD0066B517 /* ExampleForMetaSerialization */ = {
+		6325EDCC20220AFD0066B517 /* TrainFormat */ = {
 			isa = PBXNativeTarget;
-			buildConfigurationList = 6325EDDB20220AFD0066B517 /* Build configuration list for PBXNativeTarget "ExampleForMetaSerialization" */;
+			buildConfigurationList = 6325EDDB20220AFD0066B517 /* Build configuration list for PBXNativeTarget "TrainFormat" */;
 			buildPhases = (
 				6325EDC920220AFD0066B517 /* Sources */,
 				6325EDCA20220AFD0066B517 /* Frameworks */,
@@ -169,9 +169,9 @@
 			);
 			dependencies = (
 			);
-			name = ExampleForMetaSerialization;
+			name = TrainFormat;
 			productName = ExampleForMetaSerialization;
-			productReference = 6325EDCD20220AFD0066B517 /* ExampleForMetaSerialization.app */;
+			productReference = 6325EDCD20220AFD0066B517 /* TrainFormat.app */;
 			productType = "com.apple.product-type.application";
 		};
 /* End PBXNativeTarget section */
@@ -190,7 +190,7 @@
 					};
 				};
 			};
-			buildConfigurationList = 6325EDC820220AFD0066B517 /* Build configuration list for PBXProject "ExampleForMetaSerialization" */;
+			buildConfigurationList = 6325EDC820220AFD0066B517 /* Build configuration list for PBXProject "TrainFormat" */;
 			compatibilityVersion = "Xcode 8.0";
 			developmentRegion = en;
 			hasScannedForEncodings = 0;
@@ -203,7 +203,7 @@
 			projectDirPath = "";
 			projectRoot = "";
 			targets = (
-				6325EDCC20220AFD0066B517 /* ExampleForMetaSerialization */,
+				6325EDCC20220AFD0066B517 /* TrainFormat */,
 			);
 		};
 /* End PBXProject section */
@@ -372,7 +372,7 @@
 				);
 				INFOPLIST_FILE = ExampleForMetaSerialization/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/../Frameworks";
-				PRODUCT_BUNDLE_IDENTIFIER = cherrywoods.ExampleForMetaSerialization;
+				PRODUCT_BUNDLE_IDENTIFIER = cherrywoods.TrainFormat;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SWIFT_VERSION = 4.0;
 			};
@@ -391,7 +391,7 @@
 				);
 				INFOPLIST_FILE = ExampleForMetaSerialization/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/../Frameworks";
-				PRODUCT_BUNDLE_IDENTIFIER = cherrywoods.ExampleForMetaSerialization;
+				PRODUCT_BUNDLE_IDENTIFIER = cherrywoods.TrainFormat;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SWIFT_VERSION = 4.0;
 			};
@@ -400,7 +400,7 @@
 /* End XCBuildConfiguration section */
 
 /* Begin XCConfigurationList section */
-		6325EDC820220AFD0066B517 /* Build configuration list for PBXProject "ExampleForMetaSerialization" */ = {
+		6325EDC820220AFD0066B517 /* Build configuration list for PBXProject "TrainFormat" */ = {
 			isa = XCConfigurationList;
 			buildConfigurations = (
 				6325EDD920220AFD0066B517 /* Debug */,
@@ -409,7 +409,7 @@
 			defaultConfigurationIsVisible = 0;
 			defaultConfigurationName = Release;
 		};
-		6325EDDB20220AFD0066B517 /* Build configuration list for PBXNativeTarget "ExampleForMetaSerialization" */ = {
+		6325EDDB20220AFD0066B517 /* Build configuration list for PBXNativeTarget "TrainFormat" */ = {
 			isa = XCConfigurationList;
 			buildConfigurations = (
 				6325EDDC20220AFD0066B517 /* Debug */,

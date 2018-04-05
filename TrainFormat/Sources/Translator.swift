@@ -12,7 +12,7 @@ class 🚂Translator: MetaSupplier, Unwrapper {
     
     // MARK: - encoding
     
-    func wrap<T>(for value: T, at path: [CodingKey]) -> Meta? {
+    func wrap<T: Encodable>(_ value: T, for encoder: MetaEncoder) throws -> Meta? {
         
         /*
          In this function we define which types
@@ -33,9 +33,9 @@ class 🚂Translator: MetaSupplier, Unwrapper {
             value is Passenger {
             
             // we use a single Meta type for all those types
-            return SingleValueMeta(value: value)
+            return SingleValueMeta(value: value as! LosslessStringConvertible)
             
-        } else if value is GenericNil {
+        } else if value is NilMarker {
             
             // support nil values
             return SingleValueMeta.nilMeta
@@ -56,32 +56,23 @@ class 🚂Translator: MetaSupplier, Unwrapper {
      For this reason we use keyed containers for both purposes.
      */
     
-    func keyedContainerMeta() -> KeyedContainerMeta {
+    func keyedContainerMeta() -> EncodingKeyedContainerMeta {
         return ContainerMeta()
     }
     
-    func unkeyedContainerMeta() -> UnkeyedContainerMeta {
+    func unkeyedContainerMeta() -> EncodingUnkeyedContainerMeta {
         return ContainerMeta()
     }
     
     // MARK: - decoding
     
-    func unwrap<T>(meta: Meta, toType type: T.Type, at path: [CodingKey]) throws -> T? {
+    func unwrap<T: Decodable>(meta: Meta, toType type: T.Type,  for decoder: MetaDecoder) throws -> T? {
         
         guard let stringValue = (meta as? SingleValueMeta)?.string else {
             return nil
         }
         
-        /*
-         This is the decoding counterpart to wrap(for:)
-         But in difference to this method, we have no
-         value, so we can't use is. This means we can't
-         handle subclasses, etc.
-         In this case this isn't that critical, but
-         when writing a real Translator this is a real limitation.
-         It does for example makes it impossible to use all types
-         implementing LosslessStringCOnvertible as primitive types.
-         */
+        // this is the counterpart method to wrap during decoding
         
         if T.self == String.self {
             return stringValue as? T

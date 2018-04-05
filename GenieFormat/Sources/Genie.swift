@@ -12,7 +12,12 @@
 import Foundation
 import MetaSerialization
 
-struct Genie {
+struct Genie :CustomStringConvertible {
+    
+    var description: String
+    init() {
+        self.description = someInt() < 128 ? " 🧞‍♀️ " : " 🧞‍♂️ "
+    }
     
     func decode<D: Decodable>(lamp: String, to type: D.Type) throws -> D {
         
@@ -22,6 +27,9 @@ struct Genie {
         
         // reset wish counter
         wishCount = 3
+        
+        print("Starting to decode newly created meta: \(meta).")
+        print(" ** I grant you three wishes ** ")
         
         return try MetaDecoder(unwrapper: GenieUnwrapper()).decode(type: type, from: meta)
         

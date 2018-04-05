@@ -14,19 +14,28 @@ import MetaSerialization
 
 struct LampMeta: Meta, CustomStringConvertible {
     
+    // used to identify metas
+    static var counter = 0
+    private let id: Int
+    
     init?(_ lamp: String) {
         
         guard lamp == "🔦" else {
             return nil
         }
         
+        self.init()
+        
     }
     
-    init() {}
+    init() {
+        self.id = LampMeta.counter
+        LampMeta.counter += 1
+    }
     
     var description: String {
         
-        return "A lamp meta"
+        return "LampMeta nr. \(id)"
         
     }
     
@@ -34,9 +43,17 @@ struct LampMeta: Meta, CustomStringConvertible {
 
 struct GenieNilMeta: NilMeta, CustomStringConvertible {
     
+    static var counter = 0
+    private let id: Int
+    
+    init() {
+        self.id = GenieNilMeta.counter
+        GenieNilMeta.counter += 1
+    }
+    
     var description: String {
         
-        return "A genie nil meta"
+        return "GenieNilMeta nr. \(id)"
         
     }
     
@@ -44,9 +61,17 @@ struct GenieNilMeta: NilMeta, CustomStringConvertible {
 
 struct GenieContainerMeta: DecodingKeyedContainerMeta, DecodingUnkeyedContainerMeta, CustomStringConvertible {
     
+    static var counter = 0
+    private let id: Int
+    
+    init() {
+        self.id = GenieContainerMeta.counter
+        GenieContainerMeta.counter += 1
+    }
+    
     var description: String {
         
-        return "A genie container meta"
+        return "GenieContainerMeta nr. \(id)"
         
     }
     
@@ -66,6 +91,7 @@ struct GenieContainerMeta: DecodingKeyedContainerMeta, DecodingUnkeyedContainerM
     
     func getValue(for key: MetaCodingKey) -> Meta? {
         
+        print("Requesting meta for key: \(key) from meta: \(self)")
         return LampMeta()
         
     }
@@ -78,6 +104,7 @@ struct GenieContainerMeta: DecodingKeyedContainerMeta, DecodingUnkeyedContainerM
     
     func get(at index: Int) -> Meta? {
         
+        print("Requesting meta at index: \(index) from meta: \(self)")
         return LampMeta()
         
     }

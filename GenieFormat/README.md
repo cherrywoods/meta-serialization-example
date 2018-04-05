@@ -1,13 +1,8 @@
-# 🧞‍♂️ (german equivalent: Flaschengeist)
+# 🧞‍♂️Format
 This is another example project for [MetaSerialization[(https://github.com/cherrywoods/swift-meta-serialization).
 
-The genie format is a simple format just consiting of this: 🔦 (You see, it's a modern genie). What you make of it highly depends on you and what you ask the lamps genie. 
+The genie format is a simple format just consisting of this: 🔦 (You see, it's a modern genie). What you make of it highly depends on you and what you ask the lamps genie. 
 
-This exaple should demonstrate MetaSerializations capabilities for formats that aren't clear without context. 
-There is a term for this, I don't know right now. 
+This exaple should demonstrate MetaSerializations capabilities for formats that aren't determined in their interpretation (e.g. certain elements can be seen as keyed or unkeyed containers).
 
-Mainly Flaschengeist is about demonstrating the dynamically unwrapping meta tree ability of MetaSerialization.
-This gives you a better way to create containers when they are requested.
-
-... A better description will follow...
-...The implementation will also follow...
+GenieFormat demonstrates `Unwrapper`s dynamic meta tree unwinding features, that let you create container and nil metas when they are requested from a formerly uninterpreted meta.

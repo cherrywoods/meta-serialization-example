@@ -22,23 +22,23 @@ class GenieUnwrapper: Unwrapper {
     func unwrap<T>(meta: Meta, toType type: T.Type, for decoder: MetaDecoder) throws -> T? where T : Decodable {
         
         guard wishCount > 0 else {
-            
             throw GenieError.noWishesLeft
-            
         }
+        
+        print("Requesting type: \(type) for meta: \(meta).")
         
         // this format just supports Strings, Ints and Doubles for shortness
     
         switch type {
         case is String.Type:
             wishCount -= 1
-            return "You have \(wishCount+1) wishes left." as? T
+            return someString() as? T
         case is Int.Type:
             wishCount -= 1
-            return wishCount+1 as? T
+            return someInt() as? T
         case is Double.Type:
             wishCount -= 1
-            return Double(wishCount+1) as? T
+            return someDouble() as? T
         default:
             return nil
         }

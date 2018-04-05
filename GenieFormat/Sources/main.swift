@@ -15,24 +15,22 @@
 import Foundation
 
 let lamp = "🔦"
-
-struct ThreeWishes: Decodable {
+print(" -- Oh! how cool. I found a lamp: \(lamp) -- ")
+print(" -- Maybe it's also working... -- ")
+print(" Swosh! White smoke fills the air and a genie appears. ")
+let genie = Genie()
+print( genie.description )
+print(" ** Hey there. I'm a genie. ** ")
+print(" -- Wow! Hey genie. Can I use Decoodable and so on to ask you three wishes? -- ")
+print(" ** Oh of course! ** ")
+print(" -- Cool, let's do this. -- ")
+do {
     
-    init(from decoder: Decoder) throws {
-        
-        var container = try decoder.unkeyedContainer()
-        
-        // I wish a String
-        let string = try container.decode(String.self)
-        // I wish an Int
-        let int = try container.decode(Int.self)
-        // And I wish a nil
-        let isNil = try container.decodeNil()
-        
-        print("My three wishes: A String: \"\(string)\", an Int: \(int) and nil. \( isNil ? "And I got nil" : "But I didn't got nil." ).")
-        
-    }
+    let result = try Genie().decode(lamp: lamp, to: ThreeWishes.self)
+    print(" -- Wow! I got \(result.string), \(result.int) and nil! Amazing! ☺️ --")
+    
+} catch {
+    
+    print(" ** Wait, this didn't work. \(error) ** ")
     
 }
-
-_ = try Genie().decode(lamp: lamp, to: ThreeWishes.self)

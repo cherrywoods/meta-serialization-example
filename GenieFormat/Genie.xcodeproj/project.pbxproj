@@ -7,10 +7,12 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		63158BB52076441200940EC2 /* MetaSerialization.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 63880E2A2075564C00B62EF7 /* MetaSerialization.framework */; };
+		63158BB7207644BB00940EC2 /* Magic.swift in Sources */ = {isa = PBXBuildFile; fileRef = 63158BB6207644BB00940EC2 /* Magic.swift */; };
+		63158BB920764CFF00940EC2 /* ThreeWishes.swift in Sources */ = {isa = PBXBuildFile; fileRef = 63158BB820764CFF00940EC2 /* ThreeWishes.swift */; };
 		63880E0A2075552700B62EF7 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 63880E092075552700B62EF7 /* Assets.xcassets */; };
 		63880E0D2075552700B62EF7 /* MainMenu.xib in Resources */ = {isa = PBXBuildFile; fileRef = 63880E0B2075552700B62EF7 /* MainMenu.xib */; };
 		63880E162075557E00B62EF7 /* main.swift in Sources */ = {isa = PBXBuildFile; fileRef = 63880E152075557E00B62EF7 /* main.swift */; };
-		63880E33207556C200B62EF7 /* MetaSerialization.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 63880E2A2075564C00B62EF7 /* MetaSerialization.framework */; };
 		63880E352075572800B62EF7 /* Unwrapper.swift in Sources */ = {isa = PBXBuildFile; fileRef = 63880E342075572800B62EF7 /* Unwrapper.swift */; };
 		63880E3920755D0100B62EF7 /* Metas.swift in Sources */ = {isa = PBXBuildFile; fileRef = 63880E3820755D0100B62EF7 /* Metas.swift */; };
 		63880E3B20755DC900B62EF7 /* CodingKey.swift in Sources */ = {isa = PBXBuildFile; fileRef = 63880E3A20755DC900B62EF7 /* CodingKey.swift */; };
@@ -78,6 +80,8 @@
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
+		63158BB6207644BB00940EC2 /* Magic.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Magic.swift; sourceTree = "<group>"; };
+		63158BB820764CFF00940EC2 /* ThreeWishes.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ThreeWishes.swift; sourceTree = "<group>"; };
 		63880E042075552700B62EF7 /* Flaschengeist.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = Flaschengeist.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		63880E092075552700B62EF7 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		63880E0C2075552700B62EF7 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.xib; name = Base; path = Base.lproj/MainMenu.xib; sourceTree = "<group>"; };
@@ -97,7 +101,7 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				63880E33207556C200B62EF7 /* MetaSerialization.framework in Frameworks */,
+				63158BB52076441200940EC2 /* MetaSerialization.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -125,11 +129,13 @@
 			isa = PBXGroup;
 			children = (
 				63880E152075557E00B62EF7 /* main.swift */,
-				63880E3C2075645B00B62EF7 /* Genie.swift */,
+				63158BB820764CFF00940EC2 /* ThreeWishes.swift */,
 				63880E342075572800B62EF7 /* Unwrapper.swift */,
+				63880E3C2075645B00B62EF7 /* Genie.swift */,
 				63880E3820755D0100B62EF7 /* Metas.swift */,
 				63880E3A20755DC900B62EF7 /* CodingKey.swift */,
 				63880E3E2075651D00B62EF7 /* GenieError.swift */,
+				63158BB6207644BB00940EC2 /* Magic.swift */,
 				63880E092075552700B62EF7 /* Assets.xcassets */,
 				63880E0B2075552700B62EF7 /* MainMenu.xib */,
 				63880E0E2075552700B62EF7 /* Info.plist */,
@@ -197,7 +203,7 @@
 					};
 				};
 			};
-			buildConfigurationList = 63880DFF2075552700B62EF7 /* Build configuration list for PBXProject "Flaschengeist" */;
+			buildConfigurationList = 63880DFF2075552700B62EF7 /* Build configuration list for PBXProject "Genie" */;
 			compatibilityVersion = "Xcode 9.3";
 			developmentRegion = en;
 			hasScannedForEncodings = 0;
@@ -300,9 +306,11 @@
 				63880E3D2075645B00B62EF7 /* Genie.swift in Sources */,
 				63880E3920755D0100B62EF7 /* Metas.swift in Sources */,
 				63880E3B20755DC900B62EF7 /* CodingKey.swift in Sources */,
+				63158BB7207644BB00940EC2 /* Magic.swift in Sources */,
 				63880E352075572800B62EF7 /* Unwrapper.swift in Sources */,
 				63880E162075557E00B62EF7 /* main.swift in Sources */,
 				63880E3F2075651D00B62EF7 /* GenieError.swift in Sources */,
+				63158BB920764CFF00940EC2 /* ThreeWishes.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -475,7 +483,7 @@
 /* End XCBuildConfiguration section */
 
 /* Begin XCConfigurationList section */
-		63880DFF2075552700B62EF7 /* Build configuration list for PBXProject "Flaschengeist" */ = {
+		63880DFF2075552700B62EF7 /* Build configuration list for PBXProject "Genie" */ = {
 			isa = XCConfigurationList;
 			buildConfigurations = (
 				63880E102075552700B62EF7 /* Debug */,

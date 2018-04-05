@@ -29,7 +29,7 @@ enum GenieCodingKey: CodingKey {
         case 0:
             keys += []
         default:
-            preconditionFailure("You have three wishes, not more.")
+            preconditionFailure("You have three wishes, not more, not less, don't try to manipulate the genie.")
         }
         
         return keys

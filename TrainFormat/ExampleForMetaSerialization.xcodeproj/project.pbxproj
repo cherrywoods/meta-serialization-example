@@ -21,7 +21,6 @@
 		6325EDF420220B290066B517 /* Translator.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6325EDEA20220B290066B517 /* Translator.swift */; };
 		6325EDF620220B4F0066B517 /* MetaSerialization.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 6325EDF520220B4F0066B517 /* MetaSerialization.framework */; };
 		6325EDF720220B4F0066B517 /* MetaSerialization.framework in Embed Frameworks */ = {isa = PBXBuildFile; fileRef = 6325EDF520220B4F0066B517 /* MetaSerialization.framework */; settings = {ATTRIBUTES = (CodeSignOnCopy, RemoveHeadersOnCopy, ); }; };
-		6325EDFB20220B600066B517 /* MetaSerialization.framework.dSYM in CopyFiles */ = {isa = PBXBuildFile; fileRef = 6325EDFA20220B600066B517 /* MetaSerialization.framework.dSYM */; };
 		63B77F6F20234A3800FE8074 /* Train.swift in Sources */ = {isa = PBXBuildFile; fileRef = 63B77F6E20234A3800FE8074 /* Train.swift */; };
 /* End PBXBuildFile section */
 
@@ -43,7 +42,6 @@
 			dstPath = "";
 			dstSubfolderSpec = 16;
 			files = (
-				6325EDFB20220B600066B517 /* MetaSerialization.framework.dSYM in CopyFiles */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -67,7 +65,6 @@
 		6325EDEA20220B290066B517 /* Translator.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Translator.swift; sourceTree = "<group>"; };
 		6325EDF520220B4F0066B517 /* MetaSerialization.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = MetaSerialization.framework; path = Carthage/Build/Mac/MetaSerialization.framework; sourceTree = "<group>"; };
 		6325EDFA20220B600066B517 /* MetaSerialization.framework.dSYM */ = {isa = PBXFileReference; lastKnownFileType = wrapper.dsym; name = MetaSerialization.framework.dSYM; path = Carthage/Build/Mac/MetaSerialization.framework.dSYM; sourceTree = "<group>"; };
-		63340838202F5ADB004C3F99 /* MetaSerialization.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = MetaSerialization.framework; path = Carthage/Build/Mac/MetaSerialization.framework; sourceTree = "<group>"; };
 		63B77F6E20234A3800FE8074 /* Train.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Train.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
@@ -86,7 +83,6 @@
 		6325EDC420220AFD0066B517 = {
 			isa = PBXGroup;
 			children = (
-				63340838202F5ADB004C3F99 /* MetaSerialization.framework */,
 				6325EDFA20220B600066B517 /* MetaSerialization.framework.dSYM */,
 				6325EDF520220B4F0066B517 /* MetaSerialization.framework */,
 				6325EDDE20220B290066B517 /* Example */,
